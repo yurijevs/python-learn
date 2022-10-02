@@ -77,7 +77,12 @@ def square(x1,y1,x2,y2,x3,y3):
 	c = len(x3,y3,x1,y1)
 	p = 0.5*(a+b+c)
 	s = round((p*(p-a)*(p-b)*(p-c))**0.5, 2)
-	return print(f'Площадь треугольника = {s}')
+	if a + b > c and b + c > a and c + a > b: # проверка на существование треугольника
+		p = 0.5*(a+b+c)
+		s = round((p*(p-a)*(p-b)*(p-c))**0.5, 2)
+		return print(f'Площадь треугольника = {s}')
+	else:
+		return print('Треугольник не существует')
 
 # x1 = float(input('Введите координату x1: '))
 # y1 = float(input('Введите координату y1: '))
