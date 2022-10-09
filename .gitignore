@@ -152,5 +152,4 @@ cython_debug/
 #.idea/
 
 # my_test_files
-file.txt
-ip_addr.txt
+.txt
