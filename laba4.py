@@ -1,8 +1,3 @@
-import os
-from pickle import REDUCE
-
-from laba3 import numberlen
-
 # Самостоятельная работа
 # Создайте функцию, которая на вход получает имя файла - f
 def filetolist(f):
@@ -98,9 +93,35 @@ def sum_files(filename):
 # Задачи дополнительно
 
 # С клавиатуры через пробел вводится список целых чисел. Запишите его в файл с именем list1.txt. Затем перенесите из этого файла в файл list2.txt все числа, которые стоят на четных местах. Позиции нумеровать с единицы
+def evenitems(inputfile, outputfile):
+	number_list = []
+	with open(inputfile, "rt") as infile:
+		number_list = infile.read().split()
+		number_list = list(map(int, number_list))
+	with open(outputfile, "wt") as outfile:
+		for number in number_list:
+			if number % 2 == 0:
+				print(number, end=" ", file=outfile)
+# inputfile = 'list1.txt'
+# outputfile = 'list2.txt'
+# string = []
+# userinput = None
+# while userinput != "end":
+# 	userinput = input('введите числа разделяя пробелом, для окончания введите "end": ')
+# 	if userinput != "end":
+# 		string.append(userinput + "\n")
+# writetofilebylines(inputfile,string)
+# evenitems(inputfile, outputfile)
 
 
 # Создайте текстовый файл с произвольным наполнением. Узнайте, сколько символов в нем содержится. Символы перевода строки ‘\n’ учитывать не надо
+def count_char(filename):
+	with open(filename, "rt") as file:
+		file_content = file.read().replace("\n", "")
+		count = len(file_content)
+	return count
+# filename = input("Введите имя файла: ")
+# print("Количество символов - ", count_char(filename))
 
 
 # Напишите программу, которая копирует данные из одного файла в другой, но в обратном порядке. То есть в новом файле сначала идет последняя строка из старого
