@@ -153,3 +153,5 @@ cython_debug/
 
 # my_test_files
 *.txt
+
+.DS_Store

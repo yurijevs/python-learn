@@ -101,16 +101,16 @@ def evenitems(inputfile, outputfile):
 		even = [y for x,y in enumerate(number_list) if x%2 !=0]
 	with open(outputfile, "wt") as outfile:
 		print(*even, end=" ", file=outfile)
-inputfile = 'list1.txt'
-outputfile = 'list2.txt'
-string = []
-userinput = None
-while userinput != "end":
-	userinput = input('введите числа разделяя пробелом, для окончания введите "end": ')
-	if userinput != "end":
-		string.append(userinput + "\n")
-writetofilebylines(inputfile,string)
-evenitems(inputfile, outputfile)
+# inputfile = 'list1.txt'
+# outputfile = 'list2.txt'
+# string = []
+# userinput = None
+# while userinput != "end":
+# 	userinput = input('введите числа разделяя пробелом, для окончания введите "end": ')
+# 	if userinput != "end":
+# 		string.append(userinput + "\n")
+# writetofilebylines(inputfile,string)
+# evenitems(inputfile, outputfile)
 
 
 
