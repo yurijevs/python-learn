@@ -98,20 +98,21 @@ def evenitems(inputfile, outputfile):
 	with open(inputfile, "rt") as infile:
 		number_list = infile.read().split()
 		number_list = list(map(int, number_list))
+		even = [y for x,y in enumerate(number_list) if x%2 !=0]
 	with open(outputfile, "wt") as outfile:
-		for number in number_list:
-			if number % 2 == 0:
-				print(number, end=" ", file=outfile)
-# inputfile = 'list1.txt'
-# outputfile = 'list2.txt'
-# string = []
-# userinput = None
-# while userinput != "end":
-# 	userinput = input('введите числа разделяя пробелом, для окончания введите "end": ')
-# 	if userinput != "end":
-# 		string.append(userinput + "\n")
-# writetofilebylines(inputfile,string)
-# evenitems(inputfile, outputfile)
+		print(*even, end=" ", file=outfile)
+inputfile = 'list1.txt'
+outputfile = 'list2.txt'
+string = []
+userinput = None
+while userinput != "end":
+	userinput = input('введите числа разделяя пробелом, для окончания введите "end": ')
+	if userinput != "end":
+		string.append(userinput + "\n")
+writetofilebylines(inputfile,string)
+evenitems(inputfile, outputfile)
+
+
 
 
 # Создайте текстовый файл с произвольным наполнением. Узнайте, сколько символов в нем содержится. Символы перевода строки ‘\n’ учитывать не надо
