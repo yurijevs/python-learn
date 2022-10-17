@@ -155,6 +155,5 @@ cython_debug/
 *.txt
 
 .DS_Store
-.DS_Store
 
 python_learn/
