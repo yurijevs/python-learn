@@ -1,3 +1,5 @@
+# Импортируем библиотеки
+
 import socket
 import netifaces
 from tabulate import tabulate
