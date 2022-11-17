@@ -11,7 +11,7 @@ if choice == "N" or choice == "n":
     accessToken = input("What is your access token? ")
     accessToken = "Bearer " + accessToken
 else:
-    accessToken = "Bearer NjNhM2I5NWYtYzc5Mi00MjhkLWEwOWUtNTVkZDg0MWFjOThlYzU3MWEyYzUtZjU1_PE93_d0a60548-d257-4968-b7cc-b4ec8ac374d4"
+    accessToken = "Bearer на этом_месте_могла_бы_быть_ваша_реклама"
 
 def WebexMessage(message):
     '''
@@ -87,7 +87,7 @@ while True:
         r_iss = requests.get("http://api.open-notify.org/iss-now.json")
         r_iss_json = r_iss.json()['iss_position']
         coordinate_iss = r_iss_json['latitude'] + ',' + r_iss_json['longitude']
-        mapquestkey = "XKBAPlAzcRt8nndHysrB6bGSwY9dxGoA"
+        mapquestkey = "здесь_тоже"
         mapquesturl = "https://www.mapquestapi.com/geocoding/v1/reverse"
         headers = {'Content-Type': 'application/json'}
         params = {'location': coordinate_iss, 'key': mapquestkey}
